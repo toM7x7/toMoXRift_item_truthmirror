@@ -126,4 +126,5 @@ npm run verify:face
 自由移動・首振り・しゃがみへの追従、髪や手の前後関係、本人の実カメラとXRiftの実アバターでの顔はめは未確認。
 
 顔はめ版は同じアイテムIDのv2として2026-10-21 00:04 JSTにアップロード済み。[アップロード記録](docs/xrift-face-v2.md)。
+モデル読込404と不要なCSS読込を修正したv3を追加。[原因と修正・配信先検証](docs/face-runtime-path-fix.md)。
 [実装と検証記録](docs/fixed-face-prototype.md)、[試作方針と未確認点](docs/face-overlay-proposal.md)。

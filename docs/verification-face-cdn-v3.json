@@ -1,0 +1,36 @@
+{
+  "assetBase": "https://assets.xrift.net/users/d84d700c-6b11-4497-8f2d-9abd4323e598/items/07f39dd8-e59e-44a7-9d5b-da04a1e9d8d4/f3986567128d",
+  "checks": [
+    {
+      "asset": "vision_wasm_internal.js",
+      "status": 200,
+      "contentType": "application/javascript"
+    },
+    {
+      "asset": "vision_wasm_internal.wasm",
+      "status": 200,
+      "contentType": "application/wasm"
+    },
+    {
+      "asset": "vision_wasm_nosimd_internal.js",
+      "status": 200,
+      "contentType": "application/javascript"
+    },
+    {
+      "asset": "vision_wasm_nosimd_internal.wasm",
+      "status": 200,
+      "contentType": "application/wasm"
+    },
+    {
+      "asset": "truth-face-landmarker.task",
+      "status": 200,
+      "contentType": "application/octet-stream"
+    }
+  ],
+  "remoteEntryCss": "empty",
+  "detection": {
+    "faces": 1,
+    "landmarks": 478
+  },
+  "source": "actual XRift CDN runtime and model; public sample image; no real camera"
+}

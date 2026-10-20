@@ -10,6 +10,8 @@ for (const asset of assets) {
   checks.push({ asset, status: response.status, contentType: response.headers.get('content-type') })
   if (!response.ok) throw new Error(`CDN asset failed: ${asset} (${response.status})`)
 }
+const remoteResponse = await fetch(`${assetBase}/remoteEntry.js`)
+if (!remoteResponse.ok || !(await remoteResponse.text()).includes('dynamicLoadingCss([], false, "./Item")')) throw new Error('CDN remote Item must not inject preview CSS')
 const browser = await chromium.launch({ executablePath: process.env.TRUTH_MIRROR_CHROME, headless: true })
 try {
   const page = await browser.newPage()
@@ -29,7 +31,7 @@ try {
       return { faces: detected.faceLandmarks.length, landmarks: detected.faceLandmarks[0].length }
     } finally { model.close() }
   }, assetBase)
-  const report = { assetBase, checks, detection: result, source: 'actual XRift CDN runtime and model; public sample image; no real camera' }
+  const report = { assetBase, checks, remoteEntryCss: 'empty', detection: result, source: 'actual XRift CDN runtime and model; public sample image; no real camera' }
   await writeFile(new URL('../output/playwright/cdn-face-verification.json', import.meta.url), JSON.stringify(report, null, 2))
   console.log(JSON.stringify(report, null, 2))
 } finally { await browser.close() }

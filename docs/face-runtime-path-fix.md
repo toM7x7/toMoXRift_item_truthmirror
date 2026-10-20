@@ -25,3 +25,15 @@ v2の同じCDNで、以下のHEAD応答を確認した。
 
 ローカルでの顔はめ8項目は開発・本番ビルドとも再確認済み。CDNの検証結果は`output/playwright/cdn-face-verification.json`へ保存する。
 本人のカメラを取得せず、公開サンプル画像を使う。XRift内の本人のアバターとの位置合わせは利用者による確認対象のまま。
+
+## v3のアップロードと配信先検証
+
+- 登録IDは同じ`07f39dd8-e59e-44a7-9d5b-da04a1e9d8d4`。
+- アップロード: 2026-10-21 00:24:40 JST、バージョン3。ソース`133b762`。
+- 公式ビルド・配布物検査・セキュリティ検査に成功し、28ファイルを送信。
+- 配信ハッシュ: `f3986567128d`。
+- XRift詳細画面でv3「現在使用中・審査通過」を確認。証拠画面: `output/playwright/xrift-face-v3-approved.png`。
+- 配信先の全5素材がHTTP 200。JSは`application/javascript`、WASMは`application/wasm`。
+- 実配信先のWASM・モデルをブラウザで読み込み、公開サンプルから1顔・478点の検出に成功。
+- 実配信先の`remoteEntry.js`でもアイテム用CSSの読込リストが空であることを確認。
+- 検証結果: `docs/verification-face-cdn-v3.json`。
