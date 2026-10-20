@@ -125,4 +125,5 @@ npm run verify:face
 モデルは最大10回/秒を目安にメインスレッドで同期推論する試作。Worker化と低性能PCでの性能検証は未実施。
 自由移動・首振り・しゃがみへの追従、髪や手の前後関係、本人の実カメラとXRiftの実アバターでの顔はめは未確認。
 
-既存のXRift v1は更新していない。[実装と検証記録](docs/fixed-face-prototype.md)、[試作方針と未確認点](docs/face-overlay-proposal.md)。
+顔はめ版は同じアイテムIDのv2として2026-10-21 00:04 JSTにアップロード済み。[アップロード記録](docs/xrift-face-v2.md)。
+[実装と検証記録](docs/fixed-face-prototype.md)、[試作方針と未確認点](docs/face-overlay-proposal.md)。
