@@ -44,7 +44,7 @@ function Label({ text, position, width, height, color = '#e2c99a' }: {
   return <mesh position={position}><planeGeometry args={[width, height]} /><meshBasicMaterial map={map} transparent toneMapped={false} depthWrite={false} /></mesh>
 }
 
-export function Item({ position = [0, 0, 0], rotation = [0, 0, 0], scale = 1, ref, onStatus, initialDisplayMode = 'camera', onFaceStatus, onDisplayMode, onAlignment }: ItemProps) {
+export function Item({ position = [0, 0, 0], rotation = [0, 0, 0], scale = 1, ref, onStatus, initialDisplayMode = 'face', onFaceStatus, onDisplayMode, onAlignment }: ItemProps) {
   const camera = useLocalCamera()
   const [displayMode, setDisplayMode] = useState<DisplayMode>(initialDisplayMode)
   const [alignment, setAlignment] = useState<FaceAlignment>(DEFAULT_ALIGNMENT)
