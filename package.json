@@ -17,11 +17,12 @@
   ],
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5193 --strictPort",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node scripts/verify-package.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "verify:browser": "node scripts/verify-browser.mjs",
     "verify:face": "node scripts/verify-face.mjs",
+    "verify:package": "node scripts/verify-package.mjs",
     "assets:face": "node scripts/prepare-face-assets.mjs",
     "thumbnail": "node scripts/capture-thumbnail.mjs"
   },

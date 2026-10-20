@@ -7,3 +7,5 @@ output/
 .env
 .env.*
 public/face-assets/
+public/vision_wasm_*
+public/truth-face-landmarker.task

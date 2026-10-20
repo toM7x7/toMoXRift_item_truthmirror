@@ -74,7 +74,9 @@ export default defineConfig(({ command }) => ({
   build: {
     target: 'esnext',
     minify: false,
-    cssCodeSplit: false,
+    // The exposed Item has no CSS. Keep the standalone preview's stylesheet
+    // out of the remote's dynamicLoadingCss list (host style-src blocks it).
+    cssCodeSplit: true,
     assetsDir: '',
   },
   resolve: {

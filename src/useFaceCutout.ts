@@ -59,11 +59,11 @@ export function useFaceCutout(video: HTMLVideoElement | null, enabled: boolean) 
     }
     void (async () => {
       try {
-        // Dev source is /src/*.ts; built Item chunks live at the item CDN root.
-        const base = new URL(import.meta.env.DEV ? '../face-assets/' : './face-assets/', import.meta.url).href
-        const files = await FilesetResolver.forVisionTasks(`${base}wasm`)
+        // Keep assets flat: SDK 0.2.0 on Windows uploads nested paths with '\\'.
+        const base = new URL(import.meta.env.DEV ? '../' : './', import.meta.url).href.replace(/\/$/, '')
+        const files = await FilesetResolver.forVisionTasks(base)
         const created = await FaceLandmarker.createFromOptions(files, {
-          baseOptions: { modelAssetPath: `${base}face_landmarker.task`, delegate: 'CPU' },
+          baseOptions: { modelAssetPath: `${base}/truth-face-landmarker.task`, delegate: 'CPU' },
           runningMode: 'VIDEO', numFaces: 2,
           minFaceDetectionConfidence: 0.65, minFacePresenceConfidence: 0.65,
           minTrackingConfidence: 0.65,
