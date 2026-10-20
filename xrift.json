@@ -1,0 +1,11 @@
+{
+  "item": {
+    "distDir": "./dist",
+    "buildCommand": "npm run build",
+    "title": "真実の鏡",
+    "thumbnailPath": "thumbnail.png",
+    "description": "PC用の実験アイテム。触れてカメラを許可すると、自分の画面の鏡だけにWebカメラ映像が映ります。中央を切り出し左右反転して表示。映像の共有・録画・保存はしません。タブを隠すとカメラが停止します。",
+    "ignore": ["**/*.map", "**/*.d.ts", "**/index.html"],
+    "permissions": { "allowedCodeRules": ["no-navigator-access"] }
+  }
+}

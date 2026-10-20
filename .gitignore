@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.xrift/*
+!.xrift/item.json
+output/
+*.log
+.env
+.env.*

@@ -1,0 +1,15 @@
+{
+  "results": [
+    "No camera access on initial load",
+    "Clicking the 3D mirror button starts fake live video; audio disabled",
+    "Stop ends every media track",
+    "Unmount ends tracks; replacing mirror does not auto-start",
+    "Hidden-tab event stops tracks; visibility restore does not restart (synthetic visibility event)",
+    "Cancelled request stops a stream arriving after cancellation",
+    "Permission denial displays recovery guidance",
+    "No off-origin requests and no page errors during verification"
+  ],
+  "errors": [],
+  "realCameraVerified": false,
+  "xriftPlacementVerified": false
+}
