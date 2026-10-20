@@ -1,0 +1,20 @@
+{
+  "baseUrl": "http://127.0.0.1:5280",
+  "results": [
+    "Real MediaPipe model detects one public sample face; transparent face cutout appears over reflected stand-in avatar",
+    "Manual size adjustment and reset work",
+    "Leaving the fixed standing position hides the overlay; returning restores it",
+    "No-face input hides the real-face overlay",
+    "Two faces hide the overlay instead of selecting a person",
+    "Stop ends camera tracks and face inference returns to off",
+    "Restart and unmount release the camera and model lifecycle",
+    "Only standard SDK font asset requests off-origin; no other off-origin requests or page errors"
+  ],
+  "errors": [],
+  "stockSdkFonts": [
+    "https://public.xrift.net/fonts/msdf/NotoSansJP/metrics.json?v=3"
+  ],
+  "fixture": "Google MediaPipe public portrait sample, substituted camera stream",
+  "actualUserCameraTested": false,
+  "actualXriftAvatarTested": false
+}
